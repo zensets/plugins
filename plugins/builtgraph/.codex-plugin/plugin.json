@@ -4,9 +4,9 @@
   "description": "Research AEC companies, clients, competitors, projects, relationships, opportunities, and RFP pursuit decisions with Builtgraph.",
   "author": {
     "name": "Zensets",
-    "url": "https://builtgraph.com"
+    "url": "https://zensets.com"
   },
-  "homepage": "https://builtgraph.com",
+  "homepage": "https://zensets.com",
   "repository": "https://github.com/zensets/plugins",
   "keywords": [
     "aec",
@@ -27,7 +27,7 @@
       "Interactive",
       "Search"
     ],
-    "websiteURL": "https://builtgraph.com",
+    "websiteURL": "https://zensets.com",
     "defaultPrompt": [
       "Build an ideal client profile for my firm with target sectors.",
       "Find and explain potential projects that match our company profile.",
