@@ -1,12 +1,12 @@
 {
   "name": "builtgraph",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Research AEC companies, clients, competitors, projects, relationships, opportunities, and RFP pursuit decisions with Builtgraph.",
   "author": {
-    "name": "Builtgraph",
-    "url": "https://builtgraph.com"
+    "name": "Zensets",
+    "url": "https://zensets.com"
   },
-  "homepage": "https://builtgraph.com",
+  "homepage": "https://zensets.com",
   "repository": "https://github.com/zensets/plugins",
   "keywords": [
     "aec",
@@ -21,18 +21,22 @@
     "displayName": "Builtgraph",
     "shortDescription": "Research AEC markets and pursuit opportunities.",
     "longDescription": "Use Builtgraph's live MCP graph and evidence-aware workflows to build company ideal client profiles, find potential opportunities, research clients and competitors, identify emerging developers, assess RFP go/no-go risks, and explore buildings, projects, organizations, people, and relationships.",
-    "developerName": "Builtgraph",
+    "developerName": "Zensets",
     "category": "Data & Analytics",
     "capabilities": [
       "Interactive",
       "Search"
     ],
-    "websiteURL": "https://builtgraph.com",
+    "websiteURL": "https://zensets.com",
+    "privacyPolicyURL": "https://zensets.com/privacy",
+    "termsOfServiceURL": "https://zensets.com/terms",
     "defaultPrompt": [
       "Build an ideal client profile for my firm with target sectors.",
       "Find and explain potential projects that match our company profile.",
       "Analyze this attached RFP for go/no-go risks and opportunities."
     ],
-    "brandColor": "#171717"
+    "brandColor": "#171717",
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/icon.png"
   }
 }
