@@ -31,6 +31,7 @@
     "privacyPolicyURL": "https://zensets.com/privacy",
     "termsOfServiceURL": "https://zensets.com/terms",
     "defaultPrompt": [
+      "Show me what I can ask Builtgraph and which intelligence briefs fit my goals.",
       "Build an ideal client profile for my firm with target sectors.",
       "Find and explain potential projects that match our company profile.",
       "Analyze this attached RFP for go/no-go risks and opportunities."

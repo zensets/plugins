@@ -1,0 +1,63 @@
+---
+name: get-started
+description: Orient users to Builtgraph by suggesting useful questions, choosing the right AEC research workflow, and designing reusable intelligence briefs. Use when a user asks what Builtgraph can do, what they can ask, how to get started, or which reports, monitors, or briefs they can set up.
+---
+
+# Get Started with Builtgraph
+
+Help the user move from a broad goal to a useful Builtgraph workflow. Treat this as an orientation and routing skill, not a substitute for the specialist research skills.
+
+## Orient
+
+Infer any context already present. When it would materially improve the recommendation, ask for the user's:
+
+- firm or organization
+- AEC role or discipline
+- target geography
+- decision, account, market, or pursuit they need to support
+
+Do not require a complete profile before offering useful options. Let the user choose `Not sure` and explain what Builtgraph can determine from observed evidence versus what requires their strategy.
+
+Respond with a compact, tailored menu rather than an exhaustive feature inventory. Prefer questions phrased as decisions the user may need to make, such as which opportunities merit investigation, how an owner selects teams, or where a competitor is active.
+
+## Route
+
+Route the selected goal to the narrowest existing skill:
+
+- firm positioning, target sectors, or ideal clients: `$build-company-icp`
+- projects to pursue, investigate, or monitor: `$find-potential-opportunities`
+- a client, owner, developer, or prospect: `$research-client`
+- competitors, sectors, geographies, or observed client overlap: `$research-competitors`
+- emerging or expanding developers: `$find-emerging-developers`
+- an attached RFP or pursuit decision: `$assess-rfp-go-no-go`
+- direct data questions, filtering, joins, coverage, or exports: `$query-builtgraph`
+- explainable historical fit or relationship prioritization: `$score-builtgraph-opportunities`
+- charts, maps, networks, or pipeline views: `$visualize-builtgraph`
+
+If the request spans several workflows, recommend a sensible sequence and explain what each stage contributes. Do not reproduce the specialist skill's detailed procedure in this skill.
+
+## Briefs
+
+When the user asks about reports, monitoring, recurring research, or briefs, read [references/brief-catalog.md](references/brief-catalog.md). Recommend only briefs that support the user's stated decision.
+
+For a proposed brief, specify:
+
+- decision supported and intended audience
+- scope: firm, accounts, sectors, geographies, stages, and exclusions
+- evidence fields and important unknowns
+- cadence or triggering event
+- comparison window or as-of date
+- Builtgraph skill or sequence used to produce it
+- delivery format, if the user has stated one
+
+Designing a brief does not schedule it. Only create a recurring task when the user explicitly asks to schedule or automate it, and preserve any approval boundary for outreach or other external actions.
+
+## Evidence Boundaries
+
+Separate `Observed`, `Claimed`, `User-provided`, `Inferred`, and `Unknown` information when those distinctions matter. Describe opportunity results as research prioritization, not win probability. Historical participation does not prove a current bid, preferred-vendor status, an open team role, or a future selection.
+
+State relevant coverage, identity, pagination, and freshness limits. If a requested question requires a source or capability Builtgraph does not provide, say so early and offer the closest substitute without presenting it as equivalent Builtgraph evidence.
+
+## Handoff
+
+End orientation with one clear next action. If enough context is available, begin the selected specialist workflow. Otherwise ask the single question most likely to change the recommendation.

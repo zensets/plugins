@@ -1,9 +1,10 @@
 # Builtgraph Plugin
 
-Builtgraph packages nine AEC research and business-development skills with the hosted Builtgraph MCP server at `https://builtgraph.com/mcp`.
+Builtgraph packages ten AEC research and business-development skills with the hosted Builtgraph MCP server at `https://builtgraph.com/mcp`.
 
 ## Workflows
 
+- Guided onboarding, example questions, and reusable intelligence briefs
 - Company ICP and target sectors
 - Potential opportunity discovery
 - Competitor research
