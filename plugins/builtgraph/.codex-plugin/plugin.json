@@ -33,8 +33,6 @@
       "Find and explain potential projects that match our company profile.",
       "Analyze this attached RFP for go/no-go risks and opportunities."
     ],
-    "brandColor": "#0055CC",
-    "composerIcon": "./assets/icon.svg",
-    "logo": "./assets/icon.svg"
+    "brandColor": "#171717"
   }
 }
