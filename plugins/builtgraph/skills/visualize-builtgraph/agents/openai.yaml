@@ -1,0 +1,4 @@
+interface:
+  display_name: "Builtgraph Visualize"
+  short_description: "Visualize Builtgraph networks and pipelines"
+  default_prompt: "Use $visualize-builtgraph to chart owner-to-contractor relationships for this project set."

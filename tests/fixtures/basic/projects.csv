@@ -1,0 +1,5 @@
+project_id,project_name,owner_org_id,state,sector,stage,announced_date,bid_date,source_date,source_url
+p1,North Clinic,owner1,TX,healthcare,completed,2021-01-10,,2021-01-10,https://example.test/p1
+p2,West Hospital,owner1,TX,healthcare,completed,2023-02-01,,2023-02-01,https://example.test/p2
+p3,Central Health Tower,owner1,TX,healthcare,bidding,2026-06-01,2026-10-01,2026-06-01,https://example.test/p3
+p4,South School,owner2,TX,education,planned,2026-05-01,,2026-05-01,https://example.test/p4

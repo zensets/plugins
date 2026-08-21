@@ -1,0 +1,20 @@
+{
+  "name": "zensets",
+  "interface": {
+    "displayName": "Zensets"
+  },
+  "plugins": [
+    {
+      "name": "builtgraph",
+      "source": {
+        "source": "local",
+        "path": "./plugins/builtgraph"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Data & Analytics"
+    }
+  ]
+}

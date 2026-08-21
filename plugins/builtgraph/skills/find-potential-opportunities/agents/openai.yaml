@@ -1,0 +1,4 @@
+interface:
+  display_name: "Builtgraph Opportunity Finder"
+  short_description: "Match live project leads to a company ICP"
+  default_prompt: "Use $find-potential-opportunities to find projects that match our ideal client profile and explain the best leads."

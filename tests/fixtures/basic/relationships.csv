@@ -1,0 +1,8 @@
+relationship_id,project_id,organization_id,role,effective_date,source_date,source_url
+r1,p1,owner1,owner,2021-01-10,2021-01-10,https://example.test/r1
+r2,p1,firm1,architect,2021-02-01,2021-02-01,https://example.test/r2
+r3,p1,gc1,general_contractor,2021-03-01,2021-03-01,https://example.test/r3
+r4,p2,owner1,owner,2023-02-01,2023-02-01,https://example.test/r4
+r5,p2,firm1,architect,2023-03-01,2023-03-01,https://example.test/r5
+r6,p3,owner1,owner,2026-06-01,2026-06-01,https://example.test/r6
+r7,p4,owner2,owner,2026-05-01,2026-05-01,https://example.test/r7

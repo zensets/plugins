@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "builtgraph": {
+      "type": "http",
+      "url": "https://builtgraph.com/mcp"
+    }
+  }
+}

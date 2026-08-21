@@ -1,0 +1,4 @@
+interface:
+  display_name: "Builtgraph Opportunity Scoring"
+  short_description: "Rank evidence-based AEC opportunities"
+  default_prompt: "Use $score-builtgraph-opportunities to rank these projects for our firm and explain each score."

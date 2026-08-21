@@ -1,0 +1,4 @@
+interface:
+  display_name: "Builtgraph Query"
+  short_description: "Query and audit Builtgraph project data"
+  default_prompt: "Use $query-builtgraph to find active healthcare projects in Texas and return evidence-backed leads."

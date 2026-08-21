@@ -1,0 +1,38 @@
+{
+  "name": "builtgraph",
+  "version": "0.1.0",
+  "description": "Research AEC companies, clients, competitors, projects, relationships, opportunities, and RFP pursuit decisions with Builtgraph.",
+  "author": {
+    "name": "Builtgraph",
+    "url": "https://builtgraph.com"
+  },
+  "homepage": "https://builtgraph.com",
+  "repository": "https://github.com/zensets/plugins",
+  "keywords": [
+    "aec",
+    "buildings",
+    "construction",
+    "real-estate",
+    "relationships"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Builtgraph",
+    "shortDescription": "Research AEC markets and pursuit opportunities.",
+    "longDescription": "Use Builtgraph's live MCP graph and evidence-aware workflows to build company ideal client profiles, find potential opportunities, research clients and competitors, identify emerging developers, assess RFP go/no-go risks, and explore buildings, projects, organizations, people, and relationships.",
+    "developerName": "Builtgraph",
+    "category": "Data & Analytics",
+    "capabilities": [
+      "Interactive",
+      "Search"
+    ],
+    "websiteURL": "https://builtgraph.com",
+    "defaultPrompt": [
+      "Build an ideal client profile for my firm with target sectors.",
+      "Find and explain potential projects that match our company profile.",
+      "Analyze this attached RFP for go/no-go risks and opportunities."
+    ],
+    "brandColor": "#171717"
+  }
+}
