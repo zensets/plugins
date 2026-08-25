@@ -1,4 +1,4 @@
 interface:
   display_name: "Get Started with Builtgraph"
   short_description: "Discover questions, workflows, and briefs"
-  default_prompt: "Use $get-started to show me what I can ask Builtgraph and which intelligence briefs fit my goals."
+  default_prompt: "Use $get-started to show me what I can ask Builtgraph."

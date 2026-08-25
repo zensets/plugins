@@ -1,6 +1,6 @@
 # Zensets Plugins
 
-Official Zensets plugins for ChatGPT and Codex.
+Official Zensets plugins for Claude Code, ChatGPT, and Codex.
 
 ## Builtgraph
 
@@ -15,7 +15,19 @@ Builtgraph provides evidence-aware AEC research workflows backed by the hosted B
 
 The current release returns portable narrative, tables, and exportable data. It does not yet ship MCP-rendered interactive components.
 
-## Install
+## Install in Claude Code
+
+Add this marketplace and install Builtgraph from inside Claude Code:
+
+```text
+/plugin marketplace add zensets/plugins
+/plugin install builtgraph@zensets
+```
+
+Run `/reload-plugins` if Claude Code asks you to activate the newly installed plugin. Builtgraph's
+skills are available under the `builtgraph` namespace, such as `/builtgraph:get-started`.
+
+## Install in Codex
 
 Register this marketplace:
 
@@ -34,8 +46,10 @@ Start a new task after installation so Codex loads the plugin's skills and MCP s
 ## Repository layout
 
 ```text
+.claude-plugin/marketplace.json
 .agents/plugins/marketplace.json
 plugins/builtgraph/
+  .claude-plugin/plugin.json
   .codex-plugin/plugin.json
   .mcp.json
   skills/

@@ -1,4 +1,4 @@
 interface:
   display_name: "Builtgraph Competitor Research"
   short_description: "Analyze competitors, projects, and relationships"
-  default_prompt: "Use $research-competitors to show what these competitors are working on and where they overlap with us."
+  default_prompt: "Use $research-competitors to compare these firms' projects, clients, and markets."

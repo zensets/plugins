@@ -1,6 +1,9 @@
 # Builtgraph Plugin
 
-Builtgraph packages ten AEC research and business-development skills with the hosted Builtgraph MCP server at `https://builtgraph.com/mcp`.
+Builtgraph packages ten AEC and real-estate intelligence skills with the hosted, read-only Builtgraph MCP server at `https://builtgraph.com/mcp`.
+
+The skills provide public, task-oriented research guidance. Current capabilities and request
+formats are supplied by the MCP rather than duplicated in the plugin.
 
 ## Workflows
 
@@ -15,4 +18,15 @@ Builtgraph packages ten AEC research and business-development skills with the ho
 - Opportunity scoring
 - Relationship and pipeline visualization
 
-The plugin currently uses model-readable structured results, Markdown tables, and exportable artifacts. Native MCP Apps components are not included in this release.
+Results can be presented as concise findings, tables, and decision-ready research briefs.
+
+## Claude Code
+
+This directory is a Claude Code plugin as well as a Codex plugin. To test the Claude package
+directly from the repository root:
+
+```bash
+claude --plugin-dir ./plugins/builtgraph
+```
+
+Installed skills use the `builtgraph` namespace, such as `/builtgraph:get-started`.

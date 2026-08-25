@@ -1,4 +1,4 @@
 interface:
   display_name: "Builtgraph Emerging Developers"
   short_description: "Find newly observed and expanding developers"
-  default_prompt: "Use $find-emerging-developers to identify growing developers we should build relationships with."
+  default_prompt: "Use $find-emerging-developers to find NYC developers with growing project activity."

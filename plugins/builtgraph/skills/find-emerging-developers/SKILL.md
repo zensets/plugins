@@ -5,6 +5,9 @@ description: Identify newly observed or rapidly expanding real-estate developers
 
 # Find Emerging Developers
 
+Read [../query-builtgraph/references/live-mcp-playbook.md](../query-builtgraph/references/live-mcp-playbook.md)
+before live research.
+
 ## Definition
 
 Translate “new” into explicit observable criteria before ranking. Reasonable signals include first observed project in the selected period, first project in a geography or sector, accelerating project count or value, movement into larger developments, a newly verified development entity, or an established firm newly acting as developer.
@@ -14,11 +17,16 @@ Use `newly observed by Builtgraph` when company formation date is unknown. Never
 ## Workflow
 
 1. Define geography, sector, observation window, project stage, scale, user's relevant role, and as-of date.
-2. Query developer identities and projects with Builtgraph or `$query-builtgraph`; validate developer roles rather than relying on organization names.
-3. Calculate transparent emergence signals and compare early versus recent periods. Keep project count, known value, growth, and coverage separate.
-4. Examine recurring project teams and relationship concentration. Low observed concentration may indicate accessibility or simply sparse data; label both possibilities.
-5. Rank relationship targets using explicit criteria, not a hidden composite score.
+2. Use the current MCP schemas to build a bounded activity-backed discovery set, then resolve the
+   organizations and teams associated with the most relevant results.
+3. Inspect longer and shorter lookback windows separately when the tool supports them. Treat changes
+   as observed activity signals, not formation dates or complete citywide growth rates.
+4. Research prior history, sector context, and recurring teams for shortlisted organizations.
+   Keep count, units, declared cost, first-observed evidence, and coverage separate; do not invent
+   project values or stages.
+5. Examine relationship concentration. Low observed concentration may indicate accessibility or
+   sparse data; label both possibilities. Rank targets using explicit criteria, not a hidden score.
 
 ## Output
 
-Return the definition used, ranked developer table, first-observed evidence, recent project trajectory, sectors, geographies, project scale, team concentration, relevance to the user's ICP, confidence, sources, and recommended research actions. Mark incomplete histories and unresolved identities prominently.
+Return the definition used, bounded discovery method, ranked developer table, first-observed evidence, recent activity trajectory, sectors, geography, available scale signals, team concentration, relevance to the user's ICP, confidence, typed IDs, and recommended graph walks. Never call the result a citywide ranking unless coverage proves it.

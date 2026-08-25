@@ -1,0 +1,51 @@
+[
+  {
+    "id": "kpf-icp-and-active-clients",
+    "skill": "build-company-icp",
+    "category": "aec_bd",
+    "prompt": "Use $build-company-icp to identify KPF's strongest observed sectors and roles, find former clients with recent NYC activity, and suggest two evidence-backed adjacencies.",
+    "must_include": ["resolved KPF identity", "observed sectors and roles", "recent client activity", "two bounded adjacencies", "record identifiers", "as-of or evidence date"],
+    "must_not_claim": ["market share", "open procurement", "preferred vendor", "win probability"]
+  },
+  {
+    "id": "emerging-developers-nyc",
+    "skill": "find-emerging-developers",
+    "category": "aec_bd",
+    "prompt": "Use $find-emerging-developers to identify five developers newly observed or expanding through recent large NYC building activity, explain the signal, and flag team concentration.",
+    "must_include": ["bounded definition of emerging", "five prioritized developers", "recent versus longer-window evidence", "team concentration", "identity caveats", "record identifiers"],
+    "must_not_claim": ["complete citywide ranking", "open role", "future procurement", "growth rate without comparable coverage"]
+  },
+  {
+    "id": "building-diligence-25-water",
+    "skill": "query-builtgraph",
+    "category": "real_estate",
+    "prompt": "Use $query-builtgraph to investigate 25 Water Street in Manhattan: identify the property, owner or manager, recent filings, project team, financing evidence, and the three most useful follow-ups.",
+    "must_include": ["resolved property identity", "owner or manager evidence", "recent filings", "team by observed role", "financing qualification", "three focused follow-ups"],
+    "must_not_claim": ["legal control without evidence", "current loan balance from original principal", "complete team from partial evidence"]
+  },
+  {
+    "id": "zoning-environmental-opportunities",
+    "skill": "find-potential-opportunities",
+    "category": "aec_bd",
+    "prompt": "Use $find-potential-opportunities to shortlist five recent NYC zoning matters that merit environmental-specialist research, showing the obligation evidence, known participants, and next diligence step.",
+    "must_include": ["five prioritized matters", "application identifiers", "movement or date evidence", "environmental obligation evidence", "known participants", "next diligence step"],
+    "must_not_claim": ["open seat from missing participant", "active RFP", "award likelihood"]
+  },
+  {
+    "id": "kpf-office-competition",
+    "skill": "research-competitors",
+    "category": "aec_bd",
+    "prompt": "Use $research-competitors to explain KPF's most relevant observed competitors for office work, distinguish same-role firms from complementary partners and buyers, and show recent evidence separately from historical evidence.",
+    "must_include": ["resolved KPF identity", "same-role competitors", "complementary partners", "buyers", "recent versus historical evidence", "record identifiers"],
+    "must_not_claim": ["market share", "bid or loss from co-participation", "complete competitor census"]
+  },
+  {
+    "id": "unsupported-citywide-deeds",
+    "skill": "query-builtgraph",
+    "category": "boundary",
+    "prompt": "Use $query-builtgraph to find the latest NYC deeds by recording date and rank the buyers.",
+    "must_include": ["early capability boundary", "closest property-specific Builtgraph alternative", "external enrichment labeled separately"],
+    "must_not_claim": ["citywide Builtgraph deed census", "Builtgraph evidence for externally sourced deeds"]
+  }
+]
+

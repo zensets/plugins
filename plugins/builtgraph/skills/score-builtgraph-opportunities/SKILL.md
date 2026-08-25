@@ -1,49 +1,29 @@
 ---
 name: score-builtgraph-opportunities
-description: Rank and explain AEC project opportunities for contractors, architects, engineers, and subcontractors using Builtgraph project data and historical owner relationships. Use for lead prioritization, owner relationship risk, incumbent analysis, bid/no-bid support, cold-start detection, or estimating observed-market winnability from point-in-time evidence.
+description: Compare and prioritize AEC opportunities using Builtgraph evidence about fit, observed relationships, timing, and coverage. Use for explainable lead tiers, incumbent context, cold-start detection, or pursuit research; do not present the result as a win probability.
 ---
 
 # Score Builtgraph Opportunities
 
+Read [../query-builtgraph/references/live-mcp-playbook.md](../query-builtgraph/references/live-mcp-playbook.md).
+
 ## Workflow
 
-1. Read `references/scoring-contract.md` and define the target firm, role, candidate projects, and decision date.
-2. Build features only from evidence available before each decision date.
-3. Run `scripts/score_opportunities.py` for the transparent baseline.
-4. Review input coverage, identity matches, missing dates, and contribution-level explanations.
-5. Rank projects as prioritization tiers. Do not call the score a win probability unless a calibrated model has passed documented out-of-time validation.
-6. Pair the score with non-data considerations such as capacity, delivery model, procurement rules, scope fit, and conflicts when those inputs are actually available.
+1. Define the target firm, role, candidate set, decision date, explicit exclusions, and decision the
+   prioritization supports.
+2. Use the current MCP schemas to gather only evidence available by the decision date: demonstrated
+   fit, observed prior participation, relevant activity, team context, and coverage quality.
+3. Keep fit, relationship evidence, timing, and confidence as separate dimensions. Expose cold
+   starts and missing evidence instead of filling them with neutral values.
+4. Return explainable tiers and evidence counts. Use qualitative tiers unless the user supplies an
+   approved, documented scoring model and the inputs it requires.
+5. Pair public evidence with private capacity, pricing, conflicts, and proposal-quality inputs only
+   when the user provides or authorizes them.
 
 ## Guardrails
 
-- Treat prior co-participation as evidence of familiarity, not favoritism or guaranteed access.
-- Never treat inferred candidates, planholders, or mentions as losses.
-- Exclude award/winner evidence published after the decision date from predictive features.
-- Expose cold starts and sparse evidence instead of assigning false precision.
-- Keep public observed-market signals separate from private CRM, pricing, staffing, and proposal-quality signals.
-- Return feature contributions, evidence counts, as-of date, model/version label, and limitations with every score.
-
-## Command
-
-```bash
-python3 scripts/score_opportunities.py DATA_DIR \
-  --firm-id firm-456 --role architect --as-of 2026-08-20 \
-  --output scored-opportunities.csv
-```
-
-Use the result to prioritize research and outreach, not to automate bid decisions.
-
-## Winner-only owner affinity
-
-When historical winners are known but unsuccessful RFP respondents are not, use the
-positive-only owner affinity analyzer. It reports recency-weighted historical selection
-share, Bayesian-smoothed affinity, owner concentration, incumbent strength, context share,
-and evidence confidence. It never labels unobserved firms as losers and never calls its
-output a calibrated win probability.
-
-```bash
-python3 scripts/analyze_owner_affinity.py DATA_DIR \
-  --owner-id org-related --firm-id org-hks --role architect \
-  --as-of 2026-08-21 --sector mixed_use --state NY \
-  --output related-hks-affinity.json
-```
+- Historical winners do not define the unsuccessful choice set. Never turn silence into a loss.
+- Co-participation is familiarity evidence, not favoritism, access, or future selection.
+- Call a score a win probability only when a separately governed model has documented calibration
+  and out-of-time validation. Otherwise describe research priority and confidence.
+- Keep the final pursuit decision with the user.

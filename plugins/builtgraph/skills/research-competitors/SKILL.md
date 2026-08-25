@@ -5,13 +5,20 @@ description: Research AEC competitors' observed projects, sectors, geographies, 
 
 # Research Competitors
 
+Read [../query-builtgraph/references/live-mcp-playbook.md](../query-builtgraph/references/live-mcp-playbook.md)
+before live research.
+
 ## Workflow
 
 1. Identify the user's firm, relevant project role, named competitors, market, and as-of date. If no competitors are named, discover candidates by demonstrated overlap and label the selection method.
 2. Resolve every organization to a stable identity and keep unresolved same-name firms separate.
-3. Query projects and relationships with the Builtgraph MCP server or `$query-builtgraph`.
-4. Separate announced or planned work, evidenced pursuits, awards, under-construction projects, completed work, and unknown stages.
-5. Compare sector, geography, scale, owner, role, collaborator, and recent-activity overlap. Use `$visualize-builtgraph` when a network or pipeline view materially helps.
+3. Use the current MCP schemas to compare observed work, roles, geography, clients, and collaborators
+   on a like-for-like basis. Separate same-role competitors, complementary partners, and buyers.
+4. Investigate project, client, and collaborator detail only for the firms that affect the decision.
+   Surface recurring collaborators, sector adjacencies, and active shared clients as adjacent findings.
+5. Compare observed sector, geography, owner, role/seat, collaborator, and recent-activity overlap.
+   Separate any stage or award status only when a returned section actually supplies it. Use
+   `$visualize-builtgraph` when a network or portfolio view materially helps.
 
 ## Guardrails
 
@@ -19,7 +26,12 @@ description: Research AEC competitors' observed projects, sectors, geographies, 
 - Do not infer that a firm bid, lost, won, or remains engaged from a project mention alone.
 - Do not describe historical partners as current team members without current evidence.
 - State coverage limitations before interpreting apparent gaps as strategy.
+- Portfolio counts are not market share, and the leading firms returned by a bounded sector ranking
+  are not a complete competitor census.
 
 ## Output
 
-Return a competitor snapshot, current and historical project table, owner and collaborator patterns, overlap matrix, differentiated strengths or gaps supported by evidence, and monitoring signals. Attach an as-of date and sources to every time-sensitive section.
+Lead with the competitors most relevant to the decision. Separate same-role competitors,
+complementary partners, and buyers; show only the strongest supporting examples before offering a
+deeper appendix. Include owner and collaborator patterns, evidence-supported differentiation,
+monitoring signals, an as-of date, and sources for time-sensitive claims.

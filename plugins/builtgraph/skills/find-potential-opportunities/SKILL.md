@@ -5,13 +5,25 @@ description: Find and prioritize AEC project opportunities against a firm's expl
 
 # Find Potential Opportunities
 
+Read [../query-builtgraph/references/live-mcp-playbook.md](../query-builtgraph/references/live-mcp-playbook.md)
+before building a live candidate set.
+
 ## Workflow
 
 1. Load a dated ICP produced by `$build-company-icp`, or summarize the minimum firm, role, sector, geography, scale, and exclusion criteria from the conversation. Ask for missing criteria only when they would materially alter the search.
-2. Define the as-of date and eligible project stages. Use `$query-builtgraph` or the Builtgraph MCP server to build the candidate set.
-3. Use `$score-builtgraph-opportunities` when historical relationship scoring is warranted. Keep ICP fit, relationship evidence, timing, and data confidence as separate dimensions.
-4. Remove projects that violate explicit exclusions. Preserve cold starts and missing values rather than assigning neutral evidence.
-5. Classify results as `Pursue now`, `Investigate`, `Monitor`, or `Low fit`; do not call these win probabilities.
+2. Define the as-of date and eligibility criteria. Use the current MCP schemas to build candidates
+   from supported activity, planning, building, project, or entity evidence.
+3. Enrich only shortlisted candidates with relevant team, relationship, firm-fit, owner-activity,
+   or environmental context.
+4. Use `$score-builtgraph-opportunities` when the candidate evidence supports a meaningful
+   comparison. Keep ICP fit, relationship evidence, timing, and confidence separate.
+5. Remove candidates that violate explicit exclusions. Preserve cold starts and missing values.
+6. Classify supported candidates as `Investigate`, `Monitor`, or `Low fit`. Use `Pursue now` only
+   when explicit current opportunity and role evidence supports that urgency.
+
+Never call a missing or unnamed team participant an open, available, or unassigned role. State
+that Builtgraph does not name a participant and that procurement status remains unknown. Translate
+any returned availability-style field into that wording rather than quoting its label.
 
 ## Ranking dimensions
 
@@ -24,6 +36,9 @@ description: Find and prioritize AEC project opportunities against a firm's expl
 
 ## Output
 
-Lead with a filterable-in-prose opportunity table containing project, owner, location, stage, relevant dates, value when known, fit tier, fit reasons, risks, unknowns, evidence date, and source. Follow with recommended next research actions and a coverage statement. Offer CSV or JSON export when useful; do not imply a native interactive component is available.
+Lead with the strongest few candidates and explain why each merits action. Include the returned
+record, owner when resolved, location, observed activity and dates, fit tier, reasons, risks,
+unknowns, evidence date, and record ID. Include stage or value only when the evidence supplies it.
+Follow with focused research actions and a scope statement; offer deeper detail only when useful.
 
 Treat the result as research prioritization, not an automated pursuit decision.

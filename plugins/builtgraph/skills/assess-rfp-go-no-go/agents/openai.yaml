@@ -1,4 +1,4 @@
 interface:
   display_name: "Builtgraph RFP Go/No-Go"
   short_description: "Assess RFP fit, risks, teams, and staffing"
-  default_prompt: "Use $assess-rfp-go-no-go to review this attached RFP and prepare an evidence-backed pursuit recommendation."
+  default_prompt: "Use $assess-rfp-go-no-go to tell me whether we should pursue this RFP and why."

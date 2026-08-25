@@ -7,6 +7,10 @@ description: Orient users to Builtgraph by suggesting useful questions, choosing
 
 Help the user move from a broad goal to a useful Builtgraph workflow. Treat this as an orientation and routing skill, not a substitute for the specialist research skills.
 
+Read [../query-builtgraph/references/live-mcp-playbook.md](../query-builtgraph/references/live-mcp-playbook.md)
+before describing live capabilities. Suggest only questions Builtgraph can investigate with its
+current evidence.
+
 ## Orient
 
 Infer any context already present. When it would materially improve the recommendation, ask for the user's:
@@ -19,6 +23,11 @@ Infer any context already present. When it would materially improve the recommen
 Do not require a complete profile before offering useful options. Let the user choose `Not sure` and explain what Builtgraph can determine from observed evidence versus what requires their strategy.
 
 Respond with a compact, tailored menu rather than an exhaustive feature inventory. Prefer questions phrased as decisions the user may need to make, such as which opportunities merit investigation, how an owner selects teams, or where a competitor is active.
+
+Balance the menu across the user's context. Useful question families include firm positioning,
+active clients, competitors and complementary partners, people and career paths, building teams,
+owners and related actors, and planning or environmental activity. Confirm current support from the
+MCP rather than publishing a feature inventory or product-gap catalog.
 
 ## Route
 
@@ -35,6 +44,10 @@ Route the selected goal to the narrowest existing skill:
 - charts, maps, networks, or pipeline views: `$visualize-builtgraph`
 
 If the request spans several workflows, recommend a sensible sequence and explain what each stage contributes. Do not reproduce the specialist skill's detailed procedure in this skill.
+
+For direct live questions, use plain language that describes the answer the user will receive. For
+example: "Which of our past clients have new projects underway?" or "Who owns this building, and
+which firms are working on it?"
 
 ## Briefs
 
@@ -56,7 +69,9 @@ Designing a brief does not schedule it. Only create a recurring task when the us
 
 Separate `Observed`, `Claimed`, `User-provided`, `Inferred`, and `Unknown` information when those distinctions matter. Describe opportunity results as research prioritization, not win probability. Historical participation does not prove a current bid, preferred-vendor status, an open team role, or a future selection.
 
-State relevant coverage, identity, pagination, and freshness limits. If a requested question requires a source or capability Builtgraph does not provide, say so early and offer the closest substitute without presenting it as equivalent Builtgraph evidence.
+State identity, scope, and freshness qualifications when they affect the answer. If Builtgraph
+cannot substantiate a request, say so early and offer the closest useful alternative without
+presenting it as equivalent Builtgraph evidence.
 
 ## Handoff
 

@@ -1,0 +1,24 @@
+{
+  "name": "zensets",
+  "owner": {
+    "name": "Zensets",
+    "url": "https://zensets.com"
+  },
+  "description": "Official Zensets plugins for Claude Code.",
+  "plugins": [
+    {
+      "name": "builtgraph",
+      "source": "./plugins/builtgraph",
+      "displayName": "Builtgraph",
+      "description": "Research AEC companies, clients, competitors, projects, relationships, opportunities, and RFP pursuit decisions with Builtgraph.",
+      "category": "Data & Analytics",
+      "tags": [
+        "aec",
+        "buildings",
+        "construction",
+        "real-estate",
+        "relationships"
+      ]
+    }
+  ]
+}

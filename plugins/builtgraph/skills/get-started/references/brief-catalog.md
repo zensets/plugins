@@ -2,6 +2,10 @@
 
 Use this catalog as a starting point, then adapt scope, cadence, fields, and evidence boundaries to the user's decision. A brief is a reusable research specification until the user explicitly asks to schedule it.
 
+Every live brief follows the research and evidence boundaries in
+[the live MCP playbook](../../query-builtgraph/references/live-mcp-playbook.md). A cadence describes
+the proposed research rhythm; it does not create a monitor.
+
 ## Opportunity Pipeline Brief
 
 - **Supports:** Business-development and pursuit prioritization.
@@ -56,15 +60,47 @@ Use this catalog as a starting point, then adapt scope, cadence, fields, and evi
 - **Typical scope:** An owner, project, sector, geography, and explicit relationship types.
 - **Cadence:** Before a pursuit or account review; refresh when evidence changes.
 - **Route:** `$query-builtgraph`, then `$visualize-builtgraph`; use `$score-builtgraph-opportunities` for explainable historical concentration or affinity measures.
-- **Include:** Typed nodes and edges, observed roles, time window, source dates, identity uncertainty, and pagination coverage. Co-participation is not proof of a commercial relationship.
+- **Include:** Identified actors and relationships, observed roles, time window, source dates, and identity uncertainty. Co-participation is not proof of a commercial relationship.
 
 ## Market Pulse
 
 - **Supports:** Sector and geography planning.
 - **Typical scope:** Defined geography, sector, stages, roles, scale, and comparison periods.
 - **Cadence:** Monthly or quarterly.
-- **Route:** `$query-builtgraph`, with `$visualize-builtgraph` when a chart materially improves comprehension.
-- **Include:** Counts and values when available, stage mix, active organizations, change versus the comparison window, missingness, and coverage statement. Do not infer total market size without representative coverage.
+- **Route:** `$query-builtgraph`, selecting current MCP capabilities according to the market question;
+  add `$visualize-builtgraph` only when a chart materially improves comprehension.
+- **Include:** Supported counts, active organizations, comparison window, missingness, and coverage.
+  Include values or stage mix only when the selected live surface returns them. Do not infer total
+  market size without representative coverage.
+
+## Building and Team Watch
+
+- **Supports:** Account discovery, project-team research, and preparation for work at a known site.
+- **Typical scope:** Named addresses or a bounded borough/permit-type/recency building set.
+- **Route:** `$query-builtgraph` to resolve the place, inspect relevant activity and teams, and
+  follow only decision-relevant relationships.
+- **Include:** Building IDs, observed filings, owners where resolved, people and firms by recorded
+  role, lookback window, relationship completeness, identity caveats, and worthwhile follow-ups.
+
+## Zoning and Environmental Movement Brief
+
+- **Supports:** Early advisory, environmental, design, and development intelligence.
+- **Typical scope:** Borough, milestone, lookback window, and relevant specialist disciplines.
+- **Route:** `$query-builtgraph` to identify relevant planning movement, inspect environmental
+  context, and research selected applicants or specialists.
+- **Include:** Application IDs, milestones, dates, applicants and related actors, environmental
+  obligation state, named participants, missing participant evidence, and coverage. A missing
+  participant is an evidence gap, not an open or available role.
+
+## People and Career Map
+
+- **Supports:** Relationship-path research and meeting preparation.
+- **Typical scope:** Named people, organizations, role context, and as-of date.
+- **Route:** `$query-builtgraph` to resolve the person, then perform a bounded,
+  completeness-checked affiliation and project investigation.
+- **Include:** Resolved identity, aliases, observed affiliations and projects, source IDs, and
+  ambiguous matches. An observed affiliation is not current employment
+  unless time-specific evidence establishes it.
 
 ## Data Coverage and Freshness Audit
 
@@ -72,4 +108,5 @@ Use this catalog as a starting point, then adapt scope, cadence, fields, and evi
 - **Typical scope:** The entities, fields, geography, time window, and relationship types needed by the downstream decision.
 - **Cadence:** Before high-stakes analysis or when data sources change.
 - **Route:** `$query-builtgraph`.
-- **Include:** Row or entity counts, missing fields, unresolved identities, source and effective dates, pagination or sampling limits, conflicts, and downstream implications.
+- **Include:** Relevant record counts, missing fields, unresolved identities, source and effective
+  dates, material scope limits, conflicts, and downstream implications.

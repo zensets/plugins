@@ -8,9 +8,9 @@ from datetime import date
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[1]
-SCRIPT = ROOT / "plugins/builtgraph/skills/score-builtgraph-opportunities/scripts/analyze_owner_affinity.py"
-FIXTURE = ROOT / "tests/fixtures/basic"
+ROOT = Path(__file__).resolve().parents[3]
+SCRIPT = ROOT / "internal/offline-tooling/score-builtgraph-opportunities/scripts/analyze_owner_affinity.py"
+FIXTURE = ROOT / "internal/offline-tooling/tests/fixtures/basic"
 SPEC = importlib.util.spec_from_file_location("owner_affinity", SCRIPT)
 MODULE = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(MODULE)

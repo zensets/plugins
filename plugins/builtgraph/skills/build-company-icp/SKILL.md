@@ -10,15 +10,20 @@ description: Build or refresh an AEC firm's ideal client profile using Builtgrap
 If company identity is not already established, ask for the company name and portfolio website. Also request the user's office or geography, discipline or role, and any sectors they want to enter or avoid when those details would materially change the profile. Do not delay a useful first pass for optional inputs.
 
 Read [references/icp-contract.md](references/icp-contract.md) before producing the profile.
+Read [../query-builtgraph/references/live-mcp-playbook.md](../query-builtgraph/references/live-mcp-playbook.md)
+before using live graph evidence.
 
 ## Workflow
 
 1. Resolve the firm to a stable Builtgraph organization identity; preserve ambiguous matches for review.
-2. Query observed projects, roles, sectors, geographies, project scale, owners, and recurring collaborators with the Builtgraph MCP server or `$query-builtgraph`.
-3. Review the firm's official portfolio website for missing service, sector, geography, and positioning context. Treat marketing claims as claimed evidence, not completed-project proof.
-4. Reconcile conflicts and separate observed, claimed, user-provided, and inferred attributes.
-5. Draft a dated ICP with current strengths, target sectors, ideal-client characteristics, exclusions, strategic adjacencies, evidence coverage, and confidence.
-6. Offer a Markdown and JSON representation so later opportunity workflows can reuse the same profile.
+2. Use the current MCP schemas to gather observed work, roles, geography, clients, and collaborators.
+   Narrow the research to the sectors or roles that affect the profile.
+3. Distinguish historical client fit from current observed activity. Compare relevant peers,
+   complementary roles, and buyers when target-market context would improve the profile.
+4. Review the firm's official portfolio website for missing service, sector, geography, and positioning context. Treat marketing claims as claimed evidence, not completed-project proof.
+5. Reconcile conflicts and separate observed, claimed, user-provided, and inferred attributes.
+6. Draft a dated ICP with current strengths, target sectors, ideal-client characteristics, exclusions, strategic adjacencies, evidence coverage, and confidence.
+7. Offer reusable Markdown or JSON only when the user needs a portable profile.
 
 ## Guardrails
 
@@ -27,6 +32,8 @@ Read [references/icp-contract.md](references/icp-contract.md) before producing t
 - Keep current demonstrated sectors separate from target sectors.
 - Cite Builtgraph record identifiers or source URLs and portfolio pages near the claims they support.
 - If live Builtgraph or website coverage is unavailable, produce a partial profile and mark affected fields unknown.
+- A project count is observed portfolio depth, not market share; missing years make time-filtered
+  results a floor. Do not infer firm capacity or an open opportunity from client activity.
 
 ## Presentation
 

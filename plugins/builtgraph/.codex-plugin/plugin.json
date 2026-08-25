@@ -1,6 +1,6 @@
 {
   "name": "builtgraph",
-  "version": "0.1.2",
+  "version": "0.1.5+codex.20260823050403",
   "description": "Research AEC companies, clients, competitors, projects, relationships, opportunities, and RFP pursuit decisions with Builtgraph.",
   "author": {
     "name": "Zensets",
@@ -31,10 +31,9 @@
     "privacyPolicyURL": "https://zensets.com/privacy",
     "termsOfServiceURL": "https://zensets.com/terms",
     "defaultPrompt": [
-      "Show me what I can ask Builtgraph and which intelligence briefs fit my goals.",
-      "Build an ideal client profile for my firm with target sectors.",
-      "Find and explain potential projects that match our company profile.",
-      "Analyze this attached RFP for go/no-go risks and opportunities."
+      "What can Builtgraph help me with?",
+      "Who are the best-fit clients for my firm?",
+      "Who owns this building, and which firms are working on it?"
     ],
     "brandColor": "#171717",
     "composerIcon": "./assets/icon.png",

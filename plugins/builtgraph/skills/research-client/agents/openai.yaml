@@ -1,4 +1,4 @@
 interface:
   display_name: "Builtgraph Client Research"
   short_description: "Research client projects, teams, and networks"
-  default_prompt: "Use $research-client to prepare an evidence-backed account brief on this prospective client."
+  default_prompt: "Use $research-client to show me what this client is building and which firms they work with."
