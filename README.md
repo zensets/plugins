@@ -15,9 +15,12 @@ Builtgraph provides evidence-aware AEC research workflows backed by the hosted B
 
 The current release returns portable narrative, tables, and exportable data. It does not yet ship MCP-rendered interactive components.
 
-## Install in Claude Code
+## Install in Claude Code (terminal app)
 
-Add this marketplace and install Builtgraph from inside Claude Code:
+This GitHub marketplace is for **Claude Code**, not the Claude web chat at `claude.ai`. The web
+chat does not accept Claude Code's `/plugin` marketplace commands.
+
+In an interactive Claude Code session, add this marketplace and install Builtgraph:
 
 ```text
 /plugin marketplace add zensets/plugins

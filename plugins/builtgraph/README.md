@@ -22,8 +22,9 @@ Results can be presented as concise findings, tables, and decision-ready researc
 
 ## Claude Code
 
-This directory is a Claude Code plugin as well as a Codex plugin. To test the Claude package
-directly from the repository root:
+This directory is a Claude Code plugin as well as a Codex plugin. It is not directly installable
+in the Claude web chat at `claude.ai`. To test the Claude Code package directly from the repository
+root:
 
 ```bash
 claude --plugin-dir ./plugins/builtgraph
