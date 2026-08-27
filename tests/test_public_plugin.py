@@ -41,6 +41,26 @@ class PublicPluginTests(unittest.TestCase):
                 missing.append(path.parent.name)
         self.assertEqual(sorted(missing), [])
 
+    def test_active_architect_guidance_requires_scope_and_timing_validation(self):
+        guidance = (PLUGIN / "skills" / "query-builtgraph" / "references" /
+                    "live-mcp-playbook.md").read_text()
+        for value in (
+            "Confirmed active architect",
+            "Strong active indication",
+            "Filing professional only",
+            "Historical architect",
+            "scope_match",
+            "capital_event_alignment",
+        ):
+            self.assertIn(value, guidance)
+
+        opportunities = (PLUGIN / "skills" / "find-potential-opportunities" /
+                         "SKILL.md").read_text()
+        permits = (PLUGIN / "skills" / "research-permits-and-teams" /
+                   "SKILL.md").read_text()
+        self.assertIn("active-architect validation", opportunities)
+        self.assertIn("Join each professional to the relevant filing", permits)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -51,6 +51,49 @@ materially change the decision or reveal a useful contradiction.
 - If Builtgraph cannot substantiate part of a request, state that narrowly and offer a useful next
   step without describing internal architecture or publishing a capability-gap catalog.
 
+## Validate an active architect or incumbent
+
+When the question concerns an active architect, incumbent, or architectural opportunity, validate
+the specific `building + scope + sponsor + capital event + time window`. A building-level architect
+list alone does not establish who holds the commission under investigation.
+
+Before judging the incumbent, establish the resolved building and project identity, current sponsor,
+target scope, triggering acquisition, financing, filing, announcement, or procurement event, and the
+as-of date. Inspect filing-level details rather than relying only on a team summary. Preserve each
+relevant filing or project id, date, status, scope description, license type, professional, firm
+mapping and its evidence, and whether the work predates or postdates the triggering event.
+
+Treat a permit-side `architect_of_record` value as a filing-role label. A PE is a design professional
+on that filing, not necessarily an architect. An RA on a filing is not necessarily the prime
+architect for the building or capital program. Resolve an RA to a firm only when the returned
+evidence or a dated authoritative source supports that identity.
+
+Classify the result as one of:
+
+- `Confirmed active architect`: dated evidence explicitly connects the firm to the target scope and
+  sponsor, such as an owner announcement, executed award, current firm project page, or
+  scope-matching filing with a supported firm identity.
+- `Strong active indication`: a recent scope-matching filing names an RA, the RA-to-firm mapping is
+  supported, and the timing aligns with the current sponsor and capital event. Seek a second source
+  when practical.
+- `Filing professional only`: a recent filing names an RA or PE, but the evidence does not connect
+  that professional to the target commission.
+- `Historical architect`: the evidence predates the current sponsor or capital event and no source
+  demonstrates continuation.
+- `Unknown`: no evidence establishes the architecture firm responsible for the target scope;
+  procurement status remains unknown.
+
+Record `scope_match` as `exact`, `adjacent`, `unrelated`, or `unknown`, and
+`capital_event_alignment` as `after_event`, `before_event`, `continuation_confirmed`, or `unknown`.
+Tenant improvements, signage, routine facade work, engineering systems, temporary construction, and
+other unrelated filings do not establish the architect for a whole-building conversion or
+repositioning. Evidence predating a sponsor change does not establish continuation unless a source
+explicitly confirms it.
+
+Do not describe a commission as claimed, unclaimed, open, available, or unassigned. When sources
+conflict, report the competing scopes, dates, and identities rather than selecting an incumbent
+silently.
+
 ## Answer shape
 
 Lead with the decision-relevant finding. Show the most useful few results rather than an exhaustive

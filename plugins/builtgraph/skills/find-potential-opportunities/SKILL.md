@@ -15,11 +15,20 @@ before building a live candidate set.
    from supported activity, planning, building, project, or entity evidence.
 3. Enrich only shortlisted candidates with relevant team, relationship, firm-fit, owner-activity,
    or environmental context.
-4. Use `$score-builtgraph-opportunities` when the candidate evidence supports a meaningful
+4. For architectural opportunities, apply the active-architect validation in the live MCP playbook
+   to the target scope. Do not remove a candidate merely because unrelated filing professionals or
+   historical architects appear on the building.
+5. Use `$score-builtgraph-opportunities` when the candidate evidence supports a meaningful
    comparison. Keep ICP fit, relationship evidence, timing, and confidence separate.
-5. Remove candidates that violate explicit exclusions. Preserve cold starts and missing values.
-6. Classify supported candidates as `Investigate`, `Monitor`, or `Low fit`. Use `Pursue now` only
+6. Remove candidates that violate explicit exclusions. Preserve cold starts and missing values.
+7. Classify supported candidates as `Investigate`, `Monitor`, or `Low fit`. Use `Pursue now` only
    when explicit current opportunity and role evidence supports that urgency.
+
+Treat a `Confirmed active architect` as incumbent-held unless the user is investigating teaming,
+specialist, replacement, or later-phase work. Treat a `Strong active indication` as an incumbent to
+confirm, not apparently unstaffed work. `Filing professional only` and `Historical architect` do not
+prove that the target commission is held. Retain `Unknown` as an investigation target with
+procurement status unknown.
 
 Never call a missing or unnamed team participant an open, available, or unassigned role. State
 that Builtgraph does not name a participant and that procurement status remains unknown. Translate
@@ -38,7 +47,8 @@ any returned availability-style field into that wording rather than quoting its 
 
 Lead with the strongest few candidates and explain why each merits action. Include the returned
 record, owner when resolved, location, observed activity and dates, fit tier, reasons, risks,
-unknowns, evidence date, and record ID. Include stage or value only when the evidence supplies it.
+unknowns, evidence date, and record ID. For architectural opportunities, include incumbent status,
+`scope_match`, and `capital_event_alignment`. Include stage or value only when the evidence supplies it.
 Follow with focused research actions and a scope statement; offer deeper detail only when useful.
 
 Treat the result as research prioritization, not an automated pursuit decision.
