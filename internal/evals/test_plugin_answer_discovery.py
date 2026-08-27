@@ -35,6 +35,12 @@ class PluginAnswerDiscoveryTests(unittest.TestCase):
         missing = sorted({row["skill"] for row in QUESTIONS} - skill_names)
         self.assertEqual(missing, [])
 
+    def test_every_research_skill_has_a_golden_question(self):
+        excluded = {"get-started", "visualize-builtgraph"}
+        skills = {path.parent.name for path in (PLUGIN / "skills").glob("*/SKILL.md")} - excluded
+        covered = {row["skill"] for row in QUESTIONS}
+        self.assertEqual(sorted(skills - covered), [])
+
     def test_specialist_skills_link_live_contract(self):
         missing = []
         for path in (PLUGIN / "skills").glob("*/SKILL.md"):

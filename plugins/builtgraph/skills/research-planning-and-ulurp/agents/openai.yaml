@@ -1,0 +1,4 @@
+interface:
+  display_name: "Builtgraph Planning & ULURP"
+  short_description: "Research zoning movement and environmental context"
+  default_prompt: "Use $research-planning-and-ulurp to investigate this zoning or ULURP application and its current evidence."

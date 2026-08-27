@@ -1,0 +1,4 @@
+interface:
+  display_name: "Builtgraph Building & Site Research"
+  short_description: "Research a property's history, actors, and links"
+  default_prompt: "Use $research-building-and-site to investigate this building or site and separate existing facts from proposed work."

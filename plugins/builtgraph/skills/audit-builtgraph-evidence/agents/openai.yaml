@@ -1,0 +1,4 @@
+interface:
+  display_name: "Builtgraph Evidence Audit"
+  short_description: "Check identity, coverage, freshness, and conflicts"
+  default_prompt: "Use $audit-builtgraph-evidence to audit these Builtgraph results before I rely on the conclusion."

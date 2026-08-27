@@ -1,7 +1,7 @@
 {
   "name": "builtgraph",
-  "version": "0.1.5",
-  "description": "Research AEC companies, clients, competitors, projects, relationships, opportunities, and RFP pursuit decisions with Builtgraph.",
+  "version": "0.1.6",
+  "description": "Research AEC companies, buildings, permits, planning, ownership, financing, people, relationships, opportunities, and pursuits with Builtgraph.",
   "author": {
     "name": "Zensets",
     "url": "https://zensets.com"

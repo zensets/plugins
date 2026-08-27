@@ -1,0 +1,4 @@
+interface:
+  display_name: "Builtgraph People & Career Paths"
+  short_description: "Research people, roles, and observed affiliations"
+  default_prompt: "Use $research-people-and-career-paths to investigate this person's roles, affiliations, and project connections."

@@ -10,7 +10,7 @@
       "name": "builtgraph",
       "source": "./plugins/builtgraph",
       "displayName": "Builtgraph",
-      "description": "Research AEC companies, clients, competitors, projects, relationships, opportunities, and RFP pursuit decisions with Builtgraph.",
+      "description": "Research AEC companies, buildings, permits, planning, ownership, financing, people, relationships, opportunities, and pursuits with Builtgraph.",
       "category": "Data & Analytics",
       "tags": [
         "aec",

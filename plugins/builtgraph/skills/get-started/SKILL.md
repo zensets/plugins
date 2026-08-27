@@ -29,6 +29,10 @@ active clients, competitors and complementary partners, people and career paths,
 owners and related actors, and planning or environmental activity. Confirm current support from the
 MCP rather than publishing a feature inventory or product-gap catalog.
 
+When the user wants a broader capability map, read
+[references/question-map.md](references/question-map.md). Use it to explain supported question
+families and their evidence boundaries without turning the response into a tool catalog.
+
 ## Route
 
 Route the selected goal to the narrowest existing skill:
@@ -38,6 +42,12 @@ Route the selected goal to the narrowest existing skill:
 - a client, owner, developer, or prospect: `$research-client`
 - competitors, sectors, geographies, or observed client overlap: `$research-competitors`
 - emerging or expanding developers: `$find-emerging-developers`
+- a building, address, parcel, or development site: `$research-building-and-site`
+- ULURP, zoning, certification, or environmental review: `$research-planning-and-ulurp`
+- recent permits, filing scope, architects, or contractors: `$research-permits-and-teams`
+- ownership evidence, project LLCs, mortgages, lenders, or collateral: `$trace-ownership-and-financing`
+- a person, career path, employer, or repeated team connection: `$research-people-and-career-paths`
+- freshness, completeness, conflicts, attribution, or data quality: `$audit-builtgraph-evidence`
 - an attached RFP or pursuit decision: `$assess-rfp-go-no-go`
 - direct data questions, filtering, joins, coverage, or exports: `$query-builtgraph`
 - explainable historical fit or relationship prioritization: `$score-builtgraph-opportunities`
