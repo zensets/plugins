@@ -1,6 +1,6 @@
 # Builtgraph Plugin
 
-Builtgraph packages sixteen AEC and real-estate intelligence skills with the hosted, read-only Builtgraph MCP server at `https://builtgraph.com/mcp`.
+Builtgraph packages seventeen AEC and real-estate intelligence skills with the hosted, read-only Builtgraph MCP server at `https://builtgraph.com/mcp`.
 
 The skills provide public, task-oriented research guidance. Current capabilities and request
 formats are supplied by the MCP rather than duplicated in the plugin.
@@ -17,6 +17,7 @@ formats are supplied by the MCP rather than duplicated in the plugin.
 - Building and development-site research
 - Planning, zoning, ULURP, and environmental-review research
 - Permit, architect, contractor, and building-team research
+- Contractor project-history and permit-observed footprint auditing
 - Ownership, project-entity, mortgage, lender, and collateral tracing
 - People, career-path, and team-connection research
 - Evidence quality, completeness, freshness, and conflict auditing

@@ -45,6 +45,7 @@ Route the selected goal to the narrowest existing skill:
 - a building, address, parcel, or development site: `$research-building-and-site`
 - ULURP, zoning, certification, or environmental review: `$research-planning-and-ulurp`
 - recent permits, filing scope, architects, or contractors: `$research-permits-and-teams`
+- a contractor's published projects, permit-observed footprint, or known-list comparison: `$research-contractor-project-history`
 - ownership evidence, project LLCs, mortgages, lenders, or collateral: `$trace-ownership-and-financing`
 - a person, career path, employer, or repeated team connection: `$research-people-and-career-paths`
 - freshness, completeness, conflicts, attribution, or data quality: `$audit-builtgraph-evidence`

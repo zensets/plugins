@@ -1,0 +1,4 @@
+interface:
+  display_name: "Builtgraph Contractor History"
+  short_description: "Audit contractor projects and permit-linked work"
+  default_prompt: "Use $research-contractor-project-history to build an evidence-audited history of this contractor's published projects and permit-observed work."

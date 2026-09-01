@@ -36,7 +36,7 @@ class ClaudePluginTests(unittest.TestCase):
 
     def test_shared_skills_and_mcp_config_are_present(self):
         skills = sorted((PLUGIN / "skills").glob("*/SKILL.md"))
-        self.assertEqual(len(skills), 16)
+        self.assertEqual(len(skills), 17)
 
         mcp = json.loads((PLUGIN / ".mcp.json").read_text())
         builtgraph = mcp["mcpServers"]["builtgraph"]
