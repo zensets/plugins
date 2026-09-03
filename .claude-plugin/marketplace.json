@@ -4,7 +4,7 @@
     "name": "Zensets",
     "url": "https://zensets.com"
   },
-  "description": "Official Zensets plugins for Claude Code.",
+  "description": "Official Zensets plugins for Claude Code, Codex, and ChatGPT Work.",
   "plugins": [
     {
       "name": "builtgraph",

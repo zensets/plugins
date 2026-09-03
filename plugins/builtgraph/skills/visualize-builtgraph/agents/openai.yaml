@@ -2,3 +2,11 @@ interface:
   display_name: "Builtgraph Visualize"
   short_description: "Visualize Builtgraph networks and pipelines"
   default_prompt: "Use $visualize-builtgraph to map this owner's buildings, projects, and project teams."
+
+dependencies:
+  tools:
+    - type: mcp
+      value: builtgraph
+      description: Builtgraph MCP server for evidence-aware AEC and real-estate research
+      transport: streamable_http
+      url: https://builtgraph.com/mcp

@@ -2,3 +2,11 @@ interface:
   display_name: "Builtgraph Competitor Research"
   short_description: "Analyze competitors, projects, and relationships"
   default_prompt: "Use $research-competitors to compare these firms' projects, clients, and markets."
+
+dependencies:
+  tools:
+    - type: mcp
+      value: builtgraph
+      description: Builtgraph MCP server for evidence-aware AEC and real-estate research
+      transport: streamable_http
+      url: https://builtgraph.com/mcp

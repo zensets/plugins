@@ -2,3 +2,11 @@ interface:
   display_name: "Builtgraph Opportunity Scoring"
   short_description: "Rank evidence-based AEC opportunities"
   default_prompt: "Use $score-builtgraph-opportunities to compare these opportunities and explain which ones fit us best."
+
+dependencies:
+  tools:
+    - type: mcp
+      value: builtgraph
+      description: Builtgraph MCP server for evidence-aware AEC and real-estate research
+      transport: streamable_http
+      url: https://builtgraph.com/mcp

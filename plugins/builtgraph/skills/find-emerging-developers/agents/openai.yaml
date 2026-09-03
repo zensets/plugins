@@ -2,3 +2,11 @@ interface:
   display_name: "Builtgraph Emerging Developers"
   short_description: "Find newly observed and expanding developers"
   default_prompt: "Use $find-emerging-developers to find NYC developers with growing project activity."
+
+dependencies:
+  tools:
+    - type: mcp
+      value: builtgraph
+      description: Builtgraph MCP server for evidence-aware AEC and real-estate research
+      transport: streamable_http
+      url: https://builtgraph.com/mcp

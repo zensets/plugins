@@ -2,3 +2,11 @@ interface:
   display_name: "Builtgraph Planning & ULURP"
   short_description: "Research zoning movement and environmental context"
   default_prompt: "Use $research-planning-and-ulurp to investigate this zoning or ULURP application and its current evidence."
+
+dependencies:
+  tools:
+    - type: mcp
+      value: builtgraph
+      description: Builtgraph MCP server for evidence-aware AEC and real-estate research
+      transport: streamable_http
+      url: https://builtgraph.com/mcp

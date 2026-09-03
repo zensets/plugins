@@ -2,3 +2,11 @@ interface:
   display_name: "Builtgraph Opportunity Finder"
   short_description: "Match live project leads to a company ICP"
   default_prompt: "Use $find-potential-opportunities to find projects that fit our firm."
+
+dependencies:
+  tools:
+    - type: mcp
+      value: builtgraph
+      description: Builtgraph MCP server for evidence-aware AEC and real-estate research
+      transport: streamable_http
+      url: https://builtgraph.com/mcp

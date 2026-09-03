@@ -2,3 +2,11 @@ interface:
   display_name: "Builtgraph Evidence Audit"
   short_description: "Check identity, coverage, freshness, and conflicts"
   default_prompt: "Use $audit-builtgraph-evidence to audit these Builtgraph results before I rely on the conclusion."
+
+dependencies:
+  tools:
+    - type: mcp
+      value: builtgraph
+      description: Builtgraph MCP server for evidence-aware AEC and real-estate research
+      transport: streamable_http
+      url: https://builtgraph.com/mcp

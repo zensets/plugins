@@ -1,4 +1,12 @@
 interface:
   display_name: "Get Started with Builtgraph"
-  short_description: "Discover questions, workflows, and briefs"
-  default_prompt: "Use $get-started to show me what I can ask Builtgraph."
+  short_description: "Discover questions, workflows, briefs, and setup steps"
+  default_prompt: "Use $get-started to show me what I can ask Builtgraph and how to connect it."
+
+dependencies:
+  tools:
+    - type: mcp
+      value: builtgraph
+      description: Builtgraph MCP server for evidence-aware AEC and real-estate research
+      transport: streamable_http
+      url: https://builtgraph.com/mcp

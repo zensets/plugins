@@ -1,6 +1,6 @@
 {
   "name": "builtgraph",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Research AEC companies, buildings, permits, planning, ownership, financing, people, relationships, opportunities, and pursuits with Builtgraph.",
   "author": {
     "name": "Zensets",
@@ -14,5 +14,7 @@
     "construction",
     "real-estate",
     "relationships"
-  ]
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
 }

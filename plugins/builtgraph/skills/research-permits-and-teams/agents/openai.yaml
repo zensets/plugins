@@ -2,3 +2,11 @@ interface:
   display_name: "Builtgraph Permits & Teams"
   short_description: "Research filings, architects, and contractors"
   default_prompt: "Use $research-permits-and-teams to investigate recent permit activity and the people and firms named on it."
+
+dependencies:
+  tools:
+    - type: mcp
+      value: builtgraph
+      description: Builtgraph MCP server for evidence-aware AEC and real-estate research
+      transport: streamable_http
+      url: https://builtgraph.com/mcp

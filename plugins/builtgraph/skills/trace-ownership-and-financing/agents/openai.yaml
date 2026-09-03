@@ -2,3 +2,11 @@ interface:
   display_name: "Builtgraph Ownership & Financing"
   short_description: "Trace property entities, loans, and lenders"
   default_prompt: "Use $trace-ownership-and-financing to trace the ownership and financing evidence for this property or organization."
+
+dependencies:
+  tools:
+    - type: mcp
+      value: builtgraph
+      description: Builtgraph MCP server for evidence-aware AEC and real-estate research
+      transport: streamable_http
+      url: https://builtgraph.com/mcp

@@ -2,8 +2,9 @@
 
 Builtgraph packages seventeen AEC and real-estate intelligence skills with the hosted, read-only Builtgraph MCP server at `https://builtgraph.com/mcp`.
 
-The skills provide public, task-oriented research guidance. Current capabilities and request
-formats are supplied by the MCP rather than duplicated in the plugin.
+To book a demo, email [george@zensets.com](mailto:george@zensets.com).
+
+The skills provide public, task-oriented research guidance. Current capabilities and request formats are supplied by the MCP rather than duplicated in the plugin.
 
 ## Workflows
 
@@ -27,14 +28,46 @@ formats are supplied by the MCP rather than duplicated in the plugin.
 
 Results can be presented as concise findings, tables, and decision-ready research briefs.
 
+## Host coverage
+
+| Host | MCP connector | This plugin package |
+| --- | --- | --- |
+| Claude web chat | Custom connector | Not applicable |
+| Claude Desktop | Custom connector | Not applicable |
+| Claude Code | `claude mcp add --transport http builtgraph https://builtgraph.com/mcp` | Yes |
+| ChatGPT Work | Custom connector or plugin marketplace | Yes |
+| Codex | `~/.codex/config.toml` entry | Yes |
+
+See the root [README](../../README.md), [docs/HARNESS.md](../../docs/HARNESS.md), or [get-started/references/connect-builtgraph.md](skills/get-started/references/connect-builtgraph.md) for full setup steps on every host.
+
+## ChatGPT Work
+
+In the ChatGPT desktop app:
+
+1. Open this repository locally so `.agents/plugins/marketplace.json` is available.
+2. Restart the ChatGPT desktop app.
+3. Open the **Plugins Directory**, select **Zensets**, and install **Builtgraph**.
+4. Start a new chat and enable Builtgraph.
+
+For MCP-only access without plugin skills, add the custom connector described in the root README.
+
 ## Claude Code
 
-This directory is a Claude Code plugin as well as a Codex plugin. It is not directly installable
-in the Claude web chat at `claude.ai`. To test the Claude Code package directly from the repository
-root:
+To test the Claude Code package directly from the repository root:
 
 ```bash
 claude --plugin-dir ./plugins/builtgraph
 ```
 
 Installed skills use the `builtgraph` namespace, such as `/builtgraph:get-started`.
+
+## Codex
+
+Register and install from the repository root:
+
+```bash
+codex plugin marketplace add zensets/plugins
+codex plugin add builtgraph@zensets
+```
+
+Ensure `~/.codex/config.toml` includes the Builtgraph MCP server before starting a new task.

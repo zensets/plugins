@@ -3,9 +3,12 @@
   "interface": {
     "displayName": "Zensets"
   },
+  "description": "Official Zensets plugins for ChatGPT Work, Codex, and local agent marketplaces.",
   "plugins": [
     {
       "name": "builtgraph",
+      "displayName": "Builtgraph",
+      "description": "Research AEC companies, buildings, permits, planning, ownership, financing, people, relationships, opportunities, and pursuits with Builtgraph.",
       "source": {
         "source": "local",
         "path": "./plugins/builtgraph"
@@ -14,7 +17,14 @@
         "installation": "AVAILABLE",
         "authentication": "ON_INSTALL"
       },
-      "category": "Data & Analytics"
+      "category": "Data & Analytics",
+      "tags": [
+        "aec",
+        "buildings",
+        "construction",
+        "real-estate",
+        "relationships"
+      ]
     }
   ]
 }

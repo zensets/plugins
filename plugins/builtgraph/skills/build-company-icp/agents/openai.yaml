@@ -2,3 +2,11 @@ interface:
   display_name: "Builtgraph Company ICP"
   short_description: "Build an evidence-backed AEC client profile"
   default_prompt: "Use $build-company-icp to identify the clients and project types that best fit my firm."
+
+dependencies:
+  tools:
+    - type: mcp
+      value: builtgraph
+      description: Builtgraph MCP server for evidence-aware AEC and real-estate research
+      transport: streamable_http
+      url: https://builtgraph.com/mcp

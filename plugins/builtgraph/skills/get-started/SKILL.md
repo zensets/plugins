@@ -1,6 +1,6 @@
 ---
 name: get-started
-description: Orient users to Builtgraph by suggesting useful questions, choosing the right AEC research workflow, and designing reusable intelligence briefs. Use when a user asks what Builtgraph can do, what they can ask, how to get started, or which reports, monitors, or briefs they can set up.
+description: Orient users to Builtgraph by suggesting useful questions, choosing the right AEC research workflow, designing reusable intelligence briefs, and explaining how to connect Builtgraph in Claude, Claude Code, ChatGPT, or Codex. Use when a user asks what Builtgraph can do, what they can ask, how to get started, how to install or connect Builtgraph, or which reports, monitors, or briefs they can set up.
 ---
 
 # Get Started with Builtgraph
@@ -21,6 +21,8 @@ Infer any context already present. When it would materially improve the recommen
 - decision, account, market, or pursuit they need to support
 
 Do not require a complete profile before offering useful options. Let the user choose `Not sure` and explain what Builtgraph can determine from observed evidence versus what requires their strategy.
+
+When the user asks how to install, connect, enable, or set up Builtgraph in Claude, Claude Desktop, Claude Code, ChatGPT, or Codex, read [references/connect-builtgraph.md](references/connect-builtgraph.md) and answer with the steps for their host. For access or a demo, direct them to email [george@zensets.com](mailto:george@zensets.com).
 
 Respond with a compact, tailored menu rather than an exhaustive feature inventory. Prefer questions phrased as decisions the user may need to make, such as which opportunities merit investigation, how an owner selects teams, or where a competitor is active.
 
