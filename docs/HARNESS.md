@@ -14,8 +14,9 @@ https://builtgraph.com/mcp
 
 The plugin root is `plugins/builtgraph/`. It bundles:
 
+- an [Agent Plugins 1.0](https://agent-plugins.org/specification) portable package (`plugin.json`, `skills/`, `mcp.json`)
 - seventeen skills under `skills/*/SKILL.md`
-- hosted MCP config in `.mcp.json`
+- hosted MCP config in `mcp.json` (Agent Plugins) and `.mcp.json` (Claude Code / Codex)
 - host manifests in `.claude-plugin/` and `.codex-plugin/`
 - a 1024×1024 marketplace icon at `assets/icon.png` (sourced from `assets/logo.svg`, the Zensets mark)
 
@@ -28,6 +29,7 @@ The plugin root is `plugins/builtgraph/`. It bundles:
 | ChatGPT Work (desktop) | `.agents/plugins/marketplace.json` | `.codex-plugin/plugin.json` | Yes | Yes |
 | Claude web / Desktop | None | None | No | Connector only |
 | ChatGPT MCP-only path | None | None | No | Connector only |
+| Agent Plugins 1.0 clients | Point the client at `plugins/builtgraph/` | `plugin.json` | Yes | Yes (`mcp.json`) |
 
 ## Claude Code
 
@@ -94,6 +96,18 @@ ChatGPT desktop can load repo marketplaces from `.agents/plugins/marketplace.jso
 
 Use Settings → Developer mode → Apps and Connectors → custom connector → `https://builtgraph.com/mcp`.
 
+## Agent Plugins 1.0
+
+Conformant clients discover components from fixed paths only. Do not move skills or MCP config into the portable `plugin.json`.
+
+**Required files**
+
+- `plugins/builtgraph/plugin.json` with `$schema` `https://agent-plugins.org/schemas/1.0.0/plugin.schema.json`
+- `plugins/builtgraph/mcp.json` with `$schema` `https://agent-plugins.org/schemas/1.0.0/mcp.schema.json` and `type: streamable-http`
+- `plugins/builtgraph/skills/*/SKILL.md`
+
+The portable manifest is a closed schema. Claude Code and Codex keep their own manifests and `.mcp.json` (`type: http`) beside it.
+
 ## Claude web and Claude Desktop
 
 These hosts do not install plugin skills from this repository. Add Builtgraph as a custom connector and enable it per chat. Use starter questions from `plugins/builtgraph/skills/get-started/references/question-map.md`.
@@ -102,11 +116,12 @@ These hosts do not install plugin skills from this repository. Add Builtgraph as
 
 When changing the plugin:
 
-1. Keep Claude and Codex manifest versions in sync.
+1. Keep Claude, Codex, and Agent Plugins manifest versions in sync.
 2. Update skill workflows in `skills/*/SKILL.md`.
-3. Keep `agents/openai.yaml` MCP dependencies aligned with `.mcp.json`.
-4. Preserve the 1024×1024 `assets/icon.png` sourced from the official Zensets mark in `assets/logo.svg`.
-5. Run `python3 -m unittest discover -s tests -v`.
+3. Keep `agents/openai.yaml` MCP dependencies aligned with `.mcp.json` and `mcp.json`.
+4. Keep `mcp.json` on `streamable-http` and `.mcp.json` on `http` for the same Builtgraph URL.
+5. Preserve the 1024×1024 `assets/icon.png` sourced from the official Zensets mark in `assets/logo.svg`.
+6. Run `python3 -m unittest discover -s tests -v`.
 
 ## Repository layout
 
@@ -114,6 +129,8 @@ When changing the plugin:
 .claude-plugin/marketplace.json
 .agents/plugins/marketplace.json
 plugins/builtgraph/
+  plugin.json
+  mcp.json
   .claude-plugin/plugin.json
   .codex-plugin/plugin.json
   .mcp.json

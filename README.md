@@ -136,6 +136,8 @@ Start a new Codex task after you save the config and install the plugin so Codex
 .claude-plugin/marketplace.json
 .agents/plugins/marketplace.json
 plugins/builtgraph/
+  plugin.json
+  mcp.json
   .claude-plugin/plugin.json
   .codex-plugin/plugin.json
   .mcp.json

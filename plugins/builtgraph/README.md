@@ -2,6 +2,8 @@
 
 Builtgraph packages seventeen AEC and real-estate intelligence skills with the hosted, read-only Builtgraph MCP server at `https://builtgraph.com/mcp`.
 
+The plugin root also ships an [Agent Plugins 1.0](https://agent-plugins.org/specification) portable package (`plugin.json`, `skills/`, `mcp.json`) alongside Claude Code and Codex host manifests.
+
 To book a demo, email [george@zensets.com](mailto:george@zensets.com).
 
 The skills provide public, task-oriented research guidance. Current capabilities and request formats are supplied by the MCP rather than duplicated in the plugin.
@@ -32,6 +34,7 @@ Results can be presented as concise findings, tables, and decision-ready researc
 
 | Host | MCP connector | This plugin package |
 | --- | --- | --- |
+| Agent Plugins 1.0 clients | `mcp.json` | Yes |
 | Claude web chat | Custom connector | Not applicable |
 | Claude Desktop | Custom connector | Not applicable |
 | Claude Code | `claude mcp add --transport http builtgraph https://builtgraph.com/mcp` | Yes |

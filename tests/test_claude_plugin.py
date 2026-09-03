@@ -14,6 +14,20 @@ BUILTGRAPH_MCP_URL = "https://builtgraph.com/mcp"
 PLUGIN_VERSION = "0.1.8"
 ICON_PATH = PLUGIN / "assets" / "icon.png"
 MIN_ICON_SIZE = 1024
+AGENT_PLUGINS_SCHEMA = "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json"
+AGENT_PLUGINS_MCP_SCHEMA = "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json"
+AGENT_PLUGINS_ALLOWED_MANIFEST_FIELDS = {
+    "$schema",
+    "name",
+    "version",
+    "description",
+    "author",
+    "homepage",
+    "repository",
+    "license",
+    "keywords",
+    "extensions",
+}
 
 
 class ClaudePluginTests(unittest.TestCase):
@@ -48,14 +62,32 @@ class ClaudePluginTests(unittest.TestCase):
         codex_manifest = json.loads(
             (PLUGIN / ".codex-plugin" / "plugin.json").read_text()
         )
+        agent_manifest = json.loads((PLUGIN / "plugin.json").read_text())
         self.assertEqual(claude_manifest["name"], PLUGIN.name)
         self.assertEqual(claude_manifest["name"], codex_manifest["name"])
+        self.assertEqual(claude_manifest["name"], agent_manifest["name"])
         self.assertEqual(claude_manifest["version"], PLUGIN_VERSION)
         self.assertEqual(codex_manifest["version"], PLUGIN_VERSION)
+        self.assertEqual(agent_manifest["version"], PLUGIN_VERSION)
         self.assertEqual(claude_manifest["author"]["name"], "Zensets")
         self.assertEqual(
             claude_manifest["repository"], "https://github.com/zensets/plugins"
         )
+
+    def test_agent_plugins_manifest_is_closed_schema_compliant(self):
+        manifest = json.loads((PLUGIN / "plugin.json").read_text())
+        self.assertEqual(manifest["$schema"], AGENT_PLUGINS_SCHEMA)
+        self.assertTrue(set(manifest.keys()).issubset(AGENT_PLUGINS_ALLOWED_MANIFEST_FIELDS))
+        self.assertNotIn("skills", manifest)
+        self.assertNotIn("mcpServers", manifest)
+
+    def test_agent_plugins_mcp_config_uses_streamable_http(self):
+        mcp = json.loads((PLUGIN / "mcp.json").read_text())
+        self.assertEqual(mcp["$schema"], AGENT_PLUGINS_MCP_SCHEMA)
+        self.assertEqual(set(mcp.keys()), {"$schema", "mcpServers"})
+        builtgraph = mcp["mcpServers"]["builtgraph"]
+        self.assertEqual(builtgraph["type"], "streamable-http")
+        self.assertEqual(builtgraph["url"], BUILTGRAPH_MCP_URL)
 
     def test_claude_manifest_declares_skills_and_mcp(self):
         claude_manifest = json.loads(
@@ -127,6 +159,8 @@ class ClaudePluginTests(unittest.TestCase):
         for value in (
             ".claude-plugin/marketplace.json",
             ".agents/plugins/marketplace.json",
+            "plugin.json",
+            "mcp.json",
             "assets/icon.png",
             BUILTGRAPH_MCP_URL,
         ):

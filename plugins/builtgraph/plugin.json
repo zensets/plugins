@@ -1,0 +1,20 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "builtgraph",
+  "version": "0.1.8",
+  "description": "Research AEC companies, buildings, permits, planning, ownership, financing, people, relationships, opportunities, and pursuits with Builtgraph.",
+  "author": {
+    "name": "Zensets",
+    "email": "george@zensets.com",
+    "url": "https://zensets.com"
+  },
+  "homepage": "https://zensets.com",
+  "repository": "https://github.com/zensets/plugins",
+  "keywords": [
+    "aec",
+    "buildings",
+    "construction",
+    "real-estate",
+    "relationships"
+  ]
+}
